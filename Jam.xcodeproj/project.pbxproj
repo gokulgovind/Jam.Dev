@@ -11,7 +11,34 @@
 		09603B692B74EC540096BD17 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09603B682B74EC540096BD17 /* ContentView.swift */; };
 		09603B6B2B74EC560096BD17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09603B6A2B74EC560096BD17 /* Assets.xcassets */; };
 		09603B6E2B74EC560096BD17 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09603B6D2B74EC560096BD17 /* Preview Assets.xcassets */; };
+		09603B7B2B74FFB10096BD17 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09603B7A2B74FFB10096BD17 /* ShareViewController.swift */; };
+		09603B7E2B74FFB10096BD17 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09603B7C2B74FFB10096BD17 /* MainInterface.storyboard */; };
+		09603B822B74FFB10096BD17 /* JamShare.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 09603B782B74FFB10096BD17 /* JamShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		09603B802B74FFB10096BD17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09603B5B2B74EC540096BD17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09603B772B74FFB10096BD17;
+			remoteInfo = JamShare;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		09603B862B74FFB10096BD17 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				09603B822B74FFB10096BD17 /* JamShare.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		09603B632B74EC540096BD17 /* Jam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jam.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +46,21 @@
 		09603B682B74EC540096BD17 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		09603B6A2B74EC560096BD17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09603B6D2B74EC560096BD17 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		09603B782B74FFB10096BD17 /* JamShare.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = JamShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		09603B7A2B74FFB10096BD17 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		09603B7D2B74FFB10096BD17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		09603B7F2B74FFB10096BD17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		09603B602B74EC540096BD17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09603B752B74FFB10096BD17 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				09603B652B74EC540096BD17 /* Jam */,
+				09603B792B74FFB10096BD17 /* JamShare */,
 				09603B642B74EC540096BD17 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				09603B632B74EC540096BD17 /* Jam.app */,
+				09603B782B74FFB10096BD17 /* JamShare.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +107,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		09603B792B74FFB10096BD17 /* JamShare */ = {
+			isa = PBXGroup;
+			children = (
+				09603B7A2B74FFB10096BD17 /* ShareViewController.swift */,
+				09603B7C2B74FFB10096BD17 /* MainInterface.storyboard */,
+				09603B7F2B74FFB10096BD17 /* Info.plist */,
+			);
+			path = JamShare;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +127,34 @@
 				09603B5F2B74EC540096BD17 /* Sources */,
 				09603B602B74EC540096BD17 /* Frameworks */,
 				09603B612B74EC540096BD17 /* Resources */,
+				09603B862B74FFB10096BD17 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				09603B812B74FFB10096BD17 /* PBXTargetDependency */,
 			);
 			name = Jam;
 			productName = Jam;
 			productReference = 09603B632B74EC540096BD17 /* Jam.app */;
 			productType = "com.apple.product-type.application";
+		};
+		09603B772B74FFB10096BD17 /* JamShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09603B832B74FFB10096BD17 /* Build configuration list for PBXNativeTarget "JamShare" */;
+			buildPhases = (
+				09603B742B74FFB10096BD17 /* Sources */,
+				09603B752B74FFB10096BD17 /* Frameworks */,
+				09603B762B74FFB10096BD17 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JamShare;
+			productName = JamShare;
+			productReference = 09603B782B74FFB10096BD17 /* JamShare.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +167,9 @@
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					09603B622B74EC540096BD17 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					09603B772B74FFB10096BD17 = {
 						CreatedOnToolsVersion = 14.1;
 					};
 				};
@@ -116,6 +188,7 @@
 			projectRoot = "";
 			targets = (
 				09603B622B74EC540096BD17 /* Jam */,
+				09603B772B74FFB10096BD17 /* JamShare */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +200,14 @@
 			files = (
 				09603B6E2B74EC560096BD17 /* Preview Assets.xcassets in Resources */,
 				09603B6B2B74EC560096BD17 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09603B762B74FFB10096BD17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09603B7E2B74FFB10096BD17 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +223,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		09603B742B74FFB10096BD17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09603B7B2B74FFB10096BD17 /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		09603B812B74FFB10096BD17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09603B772B74FFB10096BD17 /* JamShare */;
+			targetProxy = 09603B802B74FFB10096BD17 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		09603B7C2B74FFB10096BD17 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09603B7D2B74FFB10096BD17 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		09603B6F2B74EC560096BD17 /* Debug */ = {
@@ -262,6 +370,7 @@
 		09603B722B74EC560096BD17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +400,7 @@
 		09603B732B74EC560096BD17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -317,6 +427,56 @@
 			};
 			name = Release;
 		};
+		09603B842B74FFB10096BD17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T5RAD7APKC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JamShare/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = JamShare;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.purpleApps.Jam.JamShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		09603B852B74FFB10096BD17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T5RAD7APKC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JamShare/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = JamShare;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.purpleApps.Jam.JamShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -334,6 +494,15 @@
 			buildConfigurations = (
 				09603B722B74EC560096BD17 /* Debug */,
 				09603B732B74EC560096BD17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09603B832B74FFB10096BD17 /* Build configuration list for PBXNativeTarget "JamShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09603B842B74FFB10096BD17 /* Debug */,
+				09603B852B74FFB10096BD17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
